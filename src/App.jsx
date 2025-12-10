@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Articles from "./pages/Articles";
 import Projects from "./pages/Projects";
+import Research from "./pages/Research";
 import Speaking from "./pages/Speaking";
 import Music from "./pages/Music";
 import Uses from "./pages/Uses";
@@ -55,8 +56,8 @@ function App() {
       children: [
         {
           path: "",
-          // element: <Profile />,
-          element: <Navigate to="/about" replace />,
+          element: <Profile />,
+          // element: <Navigate to="/about" replace />,
         },
         {
           path: "/about",
@@ -68,7 +69,7 @@ function App() {
         // },
         {
           path: "/research",
-          element: <Projects />,
+          element: <Research />,
         },
         {
           path: "/music",
