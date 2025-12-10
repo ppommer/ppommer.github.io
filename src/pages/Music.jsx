@@ -13,10 +13,9 @@ function Music() {
         <div>
           <iframe
             width="100%"
-            height="300"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A1668063167%3Fsecret_token%3Ds-zqYfeT4OflK&color=%235bdefa&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-            title="SoundCloud Playlist"
+            height="400"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A1668063167%3Fsecret_token%3Ds-zqYfeT4OflK&color=%235bdefa"
+            title="Pommerotti"
           ></iframe>
         </div>
       </div>
