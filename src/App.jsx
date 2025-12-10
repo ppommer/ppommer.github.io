@@ -13,6 +13,7 @@ import Research from "./pages/Research";
 import Speaking from "./pages/Speaking";
 import Music from "./pages/Music";
 import Uses from "./pages/Uses";
+import CV from "./pages/CV";
 import Root from "./pages/Root";
 import Error from "./pages/Error";
 import { useEffect, useState } from "react";
@@ -77,7 +78,7 @@ function App() {
         },
         {
           path: "/cv",
-          element: <Uses />,
+          element: <CV />,
         },
         {
           path: "*",
