@@ -9,7 +9,7 @@ Run `npm install` to install dependencies followed by `npm start` to start the d
 
 ## Production deployment
 
-Run `npm deploy` to check out the code to the `gh-pages` branch and auto-deploy.
+Run `npm run deploy` to check out the code to the `gh-pages` branch and auto-deploy.
 
 ## Analytics Setup
 
