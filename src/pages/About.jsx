@@ -1,4 +1,5 @@
 import { ReactComponent as TwitterIcon } from "../assets/socials-icons/icons8-twitter.svg";
+import { ReactComponent as SoundCloudIcon } from "../assets/socials-icons/icons8-soundcloud.svg";
 import { ReactComponent as GitHubIcon } from "../assets/socials-icons/icons8-github.svg";
 import { ReactComponent as LinkedInIcon } from "../assets/socials-icons/icons8-linkedin.svg";
 import { ReactComponent as InstagramIcon } from "../assets/socials-icons/icons8-instagram.svg";
@@ -96,6 +97,58 @@ function About() {
       </section>
       <section className="col-start-1 lg:col-start-2 lg:pl-20 mt-8 lg:mt-0">
         <ul className="flex flex-col text-zinc-200 text-sm w-full">
+          <li className="mb-5">
+            <a
+              className="flex items-center group transition hover:text-teal-500"
+              href="https://www.linkedin.com/in/paul-pommer/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2" />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+                Follow on LinkedIn
+              </p>
+            </a>
+          </li>
+          <li className="mb-5">
+            <a
+              className="flex items-center group transition hover:text-teal-500"
+              href="https://www.github.com/ppommer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2" />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+                Follow on Github
+              </p>
+            </a>
+          </li>
+          <li className="mb-5">
+            <a
+              href="https://www.soundcloud.com/pommerotti"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center group transition hover:text-teal-500"
+            >
+              <SoundCloudIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2 " />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+                Follow on SoundCloud
+              </p>
+            </a>
+          </li>
+          {/* <li className="mb-5">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center group transition hover:text-teal-500"
+            >
+              <InstagramIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2 " />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+                Follow on Instagram
+              </p>
+            </a>
+          </li>
           <li className="mb-5 ">
             <a
               href="https://www.twitter.com"
@@ -109,57 +162,17 @@ function About() {
                 Follow on Twitter
               </p>
             </a>
-          </li>
-
-          <li className="mb-5">
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center group transition hover:text-teal-500"
-            >
-              <InstagramIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2 " />
-              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
-                Follow on Instagram
-              </p>
-            </a>
-          </li>
-          <li className="mb-5">
-            <a
-              className="flex items-center group transition hover:text-teal-500"
-              href="https://www.github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GitHubIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2" />
-              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
-                Follow on Github
-              </p>
-            </a>
-          </li>
-          <li className="mb-5">
-            <a
-              className="flex items-center group transition hover:text-teal-500"
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedInIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2" />
-              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
-                Follow on LinkedIn
-              </p>
-            </a>
-          </li>
+          </li> */}
           <li className="border-t pt-5 border-zinc-100 dark:border-zinc-700/40 pl-1">
             <a
               className="flex items-center group transition hover:text-teal-500"
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:website@ppom.simplelogin.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <EmailIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-5 h-5 mr-2" />
               <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
-                spencer@planetaria.tech
+                Email
               </p>
             </a>
           </li>
