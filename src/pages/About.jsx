@@ -48,30 +48,17 @@ function About() {
         </h1>
         <div className="text-zinc-600 dark:text-zinc-400 space-y-7 mt-10 text-base">
           <p>
-            I’ve loved making things for as long as I can remember, and wrote my
-            first program when I was 6 years old, just two weeks after my mom
-            brought home the brand new Macintosh LC 550 that I taught myself to
-            type on.
+            I'm a senior research engineer at the <a href="https://dynamical-inference.ai/" target="_blank" rel="noopener noreferrer" className="text-primary-400">Dynamical Inference Lab</a> building robust and interpretable machine learning tools for decompiling biological computations.
+            Currently, I'm building core infrastructure for explainability research including a framework for empirical identifiability and consistency, software libraries & data engines around sparse autoencoder (SAE) training, and software for annotating and hosting concepts extracted by SAEs.
+            I'm also interested in training transformers on brain data at scale to study how multi-modal neural datasets can be compressed into foundation models.
           </p>
           <p>
-            The only thing I loved more than computers as a kid was space. When
-            I was 8, I climbed the 40-foot oak tree at the back of our yard
-            while wearing my older sister’s motorcycle helmet, counted down from
-            three, and jumped — hoping the tree was tall enough that with just a
-            bit of momentum I’d be able to get to orbit.
+            I'm also a senior software engineer at <a href="https://ki-macht-schule.de/" target="_blank" rel="noopener noreferrer" className="text-primary-400">KI macht Schule</a>, a non-profit science communication organization bringing AI education to schools across German-speaking countries.
+            We provide teachers with modern teaching software and are the first company to offer fully German-hosted LLMs for education purposes.
           </p>
           <p>
-            The only thing I loved more than computers as a kid was space. When
-            I was 8, I climbed the 40-foot oak tree at the back of our yard
-            while wearing my older sister’s motorcycle helmet, counted down from
-            three, and jumped — hoping the tree was tall enough that with just a
-            bit of momentum I’d be able to get to orbit.
-          </p>
-          <p>
-            Today, I’m the founder of Planetaria, where we’re working on
-            civilian space suits and manned shuttle kits you can assemble at
-            home so that the next generation of kids really can make it to orbit
-            — from the comfort of their own backyards.
+            Besides that, I'm a DJ performing under the alias <a href="https://www.soundcloud.com/pommerotti" target="_blank" rel="noopener noreferrer" className="text-primary-400">Pommerotti</a>.
+            My favorite genres are Italo Body Music, Neo Italo Disco, Italo House, 90s Trance, and Progressive House.
           </p>
         </div>
       </section>
