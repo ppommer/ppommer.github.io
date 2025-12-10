@@ -111,7 +111,7 @@ function Profile() {
           </li>
         </ul>
       </div>
-      <div className="flex justify-center gap-x-8">
+      {/* <div className="flex justify-center gap-x-8">
         <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 -rotate-2">
           <img
             src={imagesSlideshow[0]}
@@ -147,7 +147,7 @@ function Profile() {
             className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-      </div>
+      </div> */}
       <div className="grid lg:grid-cols-2 mt-24 mb-4 w-full">
         <div className="col-start-1">
           {dummyArticles.map((el) => (
