@@ -7,10 +7,9 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
-import React from "react";
+import ProfileImage from "../assets/images/profile-image.jpg";
 
-const profileImageUrl =
-  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&w=128&q=75";
+import React from "react";
 
 function SubHeader() {
   const location = useLocation();
@@ -181,7 +180,7 @@ function Header({ darkMode, toggleDarkMode }) {
           >
             <div className="rounded-full overflow-hidden">
               <img
-                src={profileImageUrl}
+                src={ProfileImage}
                 alt="profile"
                 className="aspect-auto min-h-10"
               />

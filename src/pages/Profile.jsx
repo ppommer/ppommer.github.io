@@ -9,6 +9,7 @@ import PlanetariaIcon from "../assets/cv-icons/planetaria.ecd81ade.svg";
 import AirbnbIcon from "../assets/cv-icons/airbnb.b4000690.svg";
 import FacebookIcon from "../assets/cv-icons/facebook.dd9e7d48.svg";
 import StarbucksIcon from "../assets/cv-icons/starbucks.4a5bd050.svg";
+import ProfileImage from "../assets/images/profile-image.jpg";
 
 import CvListElement from "../components/CvListElement";
 import ArticlePreview from "../components/ArticlePreview";
@@ -34,9 +35,6 @@ const dummyArticles = [
   },
 ];
 
-const profileImageUrl =
-  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&w=128&q=75";
-
 const imagesSlideshow = [
   "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-1.c5d2141c.jpg&w=640&q=75",
   "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-2.3c6c01cf.jpg&w=640&q=75",
@@ -60,7 +58,7 @@ function Profile() {
     <div className="md:px-10 lg:px-20 overflow-hidden sm:overflow-visible">
       <div className="px-4 ">
         <img
-          src={profileImageUrl}
+          src={ProfileImage}
           alt="profile"
           className="aspect-auto h-full w-16 rounded-full mb-6"
         />
