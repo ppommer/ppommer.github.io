@@ -22,6 +22,8 @@ function About() {
   }, [image, scotch]);
 
   useEffect(() => {
+    if (!typedRef.current) return;
+
     const typed = new Typed(typedRef.current, {
       strings: ["Research Engineer", "Software Engineer", "DJ"],
       typeSpeed: 50,
