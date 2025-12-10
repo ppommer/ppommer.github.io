@@ -56,8 +56,8 @@ function App() {
       children: [
         {
           path: "",
-          element: <Profile />,
-          // element: <Navigate to="/about" replace />,
+          // element: <Profile />,
+          element: <Navigate to="/about" replace />,
         },
         {
           path: "/about",
