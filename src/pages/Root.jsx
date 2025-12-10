@@ -18,7 +18,9 @@ export default function Root({ darkMode, toggleDarkMode }) {
       <div className="flex flex-col w-full max-w-7xl sm:px-8">
         <div className="ring-1 element-border min-h-screen flex flex-col justify-between bg-white  dark:bg-zinc-900">
           <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-          <Outlet />
+          <div className="flex-1">
+            <Outlet />
+          </div>
           <Footer />
         </div>
       </div>
