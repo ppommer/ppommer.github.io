@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Articles from "./pages/Articles";
 import Projects from "./pages/Projects";
 import Speaking from "./pages/Speaking";
+import Music from "./pages/Music";
 import Uses from "./pages/Uses";
 import Root from "./pages/Root";
 import Error from "./pages/Error";
@@ -71,7 +72,7 @@ function App() {
         },
         {
           path: "/music",
-          element: <Speaking />,
+          element: <Music />,
         },
         {
           path: "/cv",
