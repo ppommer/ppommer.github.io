@@ -3,6 +3,7 @@ import {
   RouterProvider,
   createBrowserRouter,
   createHashRouter,
+  Navigate,
 } from "react-router-dom";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
@@ -53,7 +54,8 @@ function App() {
       children: [
         {
           path: "",
-          element: <Profile />,
+          // element: <Profile />,
+          element: <Navigate to="/about" replace />,
         },
         {
           path: "/about",
