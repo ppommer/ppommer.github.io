@@ -1,13 +1,12 @@
 function Music() {
   return (
-    <div className="px-4 md:px-14 lg:px-28 overflow-hidden">
+    <div className="px-4 md:px-8 lg:px-28 overflow-hidden">
       <div className="lg:w-[70%] mb-20">
-        <h1 className="text-5xl font-bold mb-8 text-zinc-800 dark:text-zinc-100">
+        <h1 className="text-5xl font-bold mb-8">
           DJing
         </h1>
         <p className="text-zinc-600 dark:text-zinc-400">
-          A collection of mixtapes and livesets, recorded from various
-          events and sessions. Enjoy!
+          A collection of mixtapes and livesets. Enjoy!
         </p>
       </div>
       <div className="space-y-16 mb-16">
