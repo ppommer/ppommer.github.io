@@ -99,7 +99,7 @@ function Uses() {
           <div className="md:col-span-3">
             <div className="space-y-16">
               {dummyWorkstation.map((el) => (
-                <UsesElement {...el} />
+                <UsesElement key={el.title} {...el} />
               ))}
             </div>
           </div>
@@ -111,7 +111,7 @@ function Uses() {
           <div className="md:col-span-3">
             <div className="space-y-16">
               {dummyDevtools.map((el) => (
-                <UsesElement {...el} />
+                <UsesElement key={el.title} {...el} />
               ))}
             </div>
           </div>
@@ -123,7 +123,7 @@ function Uses() {
           <div className="md:col-span-3">
             <div className="space-y-16">
               {dummyDesign.map((el) => (
-                <UsesElement {...el} />
+                <UsesElement key={el.title} {...el} />
               ))}
             </div>
           </div>
@@ -135,7 +135,7 @@ function Uses() {
           <div className="md:col-span-3">
             <div className="space-y-16">
               {dummyProductivity.map((el) => (
-                <UsesElement {...el} />
+                <UsesElement key={el.title} {...el} />
               ))}
             </div>
           </div>

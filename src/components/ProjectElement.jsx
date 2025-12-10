@@ -31,7 +31,7 @@ export default function ProjectElement({
           alt="link"
           className="w-4 aspect-square fill-zinc-400 dark:fill-zinc-200  group-hover:fill-teal-500 transition-colors"
         />
-        <p>{url}</p>
+        <span>{url}</span>
       </p>
     </div>
   );
