@@ -191,8 +191,10 @@ function CV() {
     <div className="px-4 md:px-14 lg:px-28 overflow-hidden">
       <div className="mb-12 gap-20 flex flex-col">
         <div className="grid max-w-3xl grid-cols-1 gap-y-8 items-baseline md:grid-cols-4 md:border-l md:pt-2 md:pl-6  border-zinc-100 dark:border-zinc-700/40">
-          <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-100">
-            Current Positions
+          <p className="text-base font-bold text-zinc-800 dark:text-zinc-100">
+            <span className="text-highlight-primary">
+              Current Positions
+            </span>
           </p>
           <div className="md:col-span-3">
             <div className="space-y-16">
@@ -203,8 +205,10 @@ function CV() {
           </div>
         </div>
         <div className="grid max-w-3xl grid-cols-1 gap-y-8 items-baseline md:grid-cols-4 md:border-l md:pt-2 md:pl-6  border-zinc-100 dark:border-zinc-700/40">
-          <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-100">
-            Education
+          <p className="text-base font-bold text-zinc-800 dark:text-zinc-100">
+            <span className="text-highlight-primary">
+              Education
+            </span>
           </p>
           <div className="md:col-span-3">
             <div className="space-y-16">
@@ -215,8 +219,10 @@ function CV() {
           </div>
         </div>
         <div className="grid max-w-3xl grid-cols-1 gap-y-8 items-baseline md:grid-cols-4 md:border-l md:pt-2 md:pl-6  border-zinc-100 dark:border-zinc-700/40">
-          <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-100">
-            Professional Experience
+          <p className="text-lg font-bold text-zinc-800 dark:text-zinc-100">
+            <span className="text-highlight-primary">
+              Professional Experience
+            </span>
           </p>
           <div className="md:col-span-3">
             <div className="space-y-16">
@@ -227,8 +233,10 @@ function CV() {
           </div>
         </div>
         <div className="grid max-w-3xl grid-cols-1 gap-y-8 items-baseline md:grid-cols-4 md:border-l md:pt-2 md:pl-6  border-zinc-100 dark:border-zinc-700/40">
-          <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-100">
-            Volunteering
+          <p className="text-lg font-bold text-zinc-800 dark:text-zinc-100">
+            <span className="text-highlight-primary">
+              Volunteering
+            </span>
           </p>
           <div className="md:col-span-3">
             <div className="space-y-16">

@@ -38,3 +38,16 @@ img,
 h1 {
   user-select: none;
 }
+
+[class*=text-highlight-] {
+  background-position: 0 1em;
+  background-size: 100% 0.3em;
+  background-repeat: repeat-x;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  display: inline;
+}
+
+.text-highlight-primary {
+  background-image: linear-gradient(to bottom, #5BDEFA80, #5BDEFA80);
+}
