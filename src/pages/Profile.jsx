@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import Typed from "typed.js";
 import { ReactComponent as TwitterIcon } from "../assets/socials-icons//icons8-twitter.svg";
 import { ReactComponent as GitHubIcon } from "../assets/socials-icons/icons8-github.svg";
 import { ReactComponent as LinkedInIcon } from "../assets/socials-icons/icons8-linkedin.svg";
@@ -45,6 +46,24 @@ const imagesSlideshow = [
 
 function Profile() {
   const emailInput = useRef(null);
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: ["Research Engineer", "Software Engineer", "DJ"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   const onFormSubmit = (e) => {
     e.preventDefault();
     // redirect to thanks for subscribing
