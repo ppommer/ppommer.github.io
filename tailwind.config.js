@@ -13,6 +13,9 @@ module.exports = {
           500: "#49B2C8",
         },
       },
+      fontFamily: {
+        sans: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+      },
     },
   },
   plugins: [],
