@@ -64,7 +64,7 @@ function About() {
             We provide teachers with modern teaching software and are the first company to offer fully German-hosted LLMs for education purposes.
           </p>
           <p>
-            Besides that, I'm a DJ performing under the alias <a href="https://www.soundcloud.com/pommerotti" target="_blank" rel="noopener noreferrer" className="text-primary-400">Pommerotti</a>.
+            Besides that, I'm a DJ performing under the alias <a href="https://soundcloud.com/pommerotti" target="_blank" rel="noopener noreferrer" className="text-primary-400">Pommerotti</a>.
             My favorite genres are Italo Body Music, Neo Italo Disco, Italo House, 90s Trance, and Progressive House.
           </p>
         </div>
