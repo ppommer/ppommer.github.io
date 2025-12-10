@@ -11,24 +11,16 @@ import ProfileImage from "../assets/images/profile-image.jpg";
 
 import React from "react";
 
-function SubHeader({ tabRefs }) {
+function SubHeader({ tabElementsByPath }) {
   const location = useLocation();
   const [underlineStyle, setUnderlineStyle] = useState({ opacity: 0, transform: 'translateX(0px)' });
 
   useEffect(() => {
     const calculatePosition = () => {
-      const pathToIndex = {
-        "/about": 0,
-        "/blog": 1,
-        "/research": 2,
-        "/music": 3,
-        "/cv": 4,
-      };
-
-      const index = pathToIndex[location.pathname];
+      // Look up the element by pathname directly
+      const tabElement = tabElementsByPath[location.pathname];
       
-      if (index !== undefined && tabRefs[index]?.current) {
-        const tabElement = tabRefs[index].current;
+      if (tabElement) {
         const tabRect = tabElement.getBoundingClientRect();
         const parentRect = tabElement.closest('ul').getBoundingClientRect();
         
@@ -63,7 +55,7 @@ function SubHeader({ tabRefs }) {
     return () => {
       window.removeEventListener('resize', calculatePosition);
     };
-  }, [location.pathname, tabRefs]);
+  }, [location.pathname, tabElementsByPath]);
 
   return (
     <span
@@ -83,15 +75,29 @@ function Header({ darkMode, toggleDarkMode }) {
     showMenu: false,
   });
 
+  // Define tabs configuration - comment out any tab to hide it
+  const tabsConfig = [
+    { path: "about", label: "About" },
+    { path: "blog", label: "Blog" },
+    { path: "research", label: "Research" },
+    { path: "music", label: "Music" },
+    { path: "cv", label: "CV" },
+  ];
+
+  // Store tab elements by pathname for dynamic lookup
+  const tabElementsByPath = useRef({});
+  
+  // Ref callback to store element references by path
+  const setTabRef = (path) => (element) => {
+    if (element) {
+      tabElementsByPath.current[`/${path}`] = element;
+    } else {
+      delete tabElementsByPath.current[`/${path}`];
+    }
+  };
+
   const header = useRef();
   const prevScrollHeight = useRef(0);
-  const tabRefs = [
-    useRef(null), // about
-    useRef(null), // blog
-    useRef(null), // research
-    useRef(null), // music
-    useRef(null), // cv
-  ];
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -183,31 +189,13 @@ function Header({ darkMode, toggleDarkMode }) {
           />
         </div>
         <ul className="-my-2 mt-4 text-zinc-800 dark:text-zinc-300 divide-y divide-zinc-900/5 dark:divide-zinc-200/5 text-base">
-          <li className="py-3">
-            <NavLink to="about" onClick={closeMenu}>
-              About
-            </NavLink>
-          </li>
-          <li className="py-3" onClick={closeMenu}>
-            <NavLink to="blog" onClick={closeMenu}>
-              Blog
-            </NavLink>
-          </li>
-          <li className="py-3">
-            <NavLink to="research" onClick={closeMenu}>
-              Research
-            </NavLink>
-          </li>
-          <li className="py-3">
-            <NavLink to="music" onClick={closeMenu}>
-              Music
-            </NavLink>
-          </li>
-          <li className="py-3">
-            <NavLink to="cv" onClick={closeMenu}>
-              CV
-            </NavLink>
-          </li>
+          {tabsConfig.map((tab) => (
+            <li key={tab.path} className="py-3">
+              <NavLink to={tab.path} onClick={closeMenu}>
+                {tab.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
       <div
@@ -233,69 +221,26 @@ function Header({ darkMode, toggleDarkMode }) {
         )}
 
         <ul className=" rounded-full hidden md:flex bg-white/90 px-3 py-2.5 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-          <SubHeader tabRefs={tabRefs} />
+          <SubHeader tabElementsByPath={tabElementsByPath.current} />
 
-          <li ref={tabRefs[0]} className="mx-3 hover:text-primary-400 transition ease-out">
-            <NavLink
-              to="about"
-              className={({ isActive, isPending }) =>
-                isPending || isActive
-                  ? "dark:text-primary-400 text-primary-500"
-                  : null
-              }
+          {tabsConfig.map((tab) => (
+            <li
+              key={tab.path}
+              ref={setTabRef(tab.path)}
+              className="mx-3 hover:text-primary-400 transition ease-out"
             >
-              About
-            </NavLink>
-          </li>
-
-          <li ref={tabRefs[1]} className="mx-3 hover:text-primary-400 transition ease-out">
-            <NavLink
-              to="blog"
-              className={({ isActive, isPending }) =>
-                isPending || isActive
-                  ? "dark:text-primary-400 text-primary-500"
-                  : null
-              }
-            >
-              Blog
-            </NavLink>
-          </li>
-          <li ref={tabRefs[2]} className="mx-3 hover:text-primary-400 transition ease-out">
-            <NavLink
-              to="research"
-              className={({ isActive, isPending }) =>
-                isPending || isActive
-                  ? "dark:text-primary-400 text-primary-500"
-                  : null
-              }
-            >
-              Research
-            </NavLink>
-          </li>
-          <li ref={tabRefs[3]} className="mx-3 hover:text-primary-400 transition ease-out">
-            <NavLink
-              to="music"
-              className={({ isActive, isPending }) =>
-                isPending || isActive
-                  ? "dark:text-primary-400 text-primary-500"
-                  : null
-              }
-            >
-              Music
-            </NavLink>
-          </li>
-          <li ref={tabRefs[4]} className="mx-3 hover:text-primary-400 transition ease-out">
-            <NavLink
-              to="cv"
-              className={({ isActive, isPending }) =>
-                isPending || isActive
-                  ? "dark:text-primary-400 text-primary-500"
-                  : null
-              }
-            >
-              CV
-            </NavLink>
-          </li>
+              <NavLink
+                to={tab.path}
+                className={({ isActive, isPending }) =>
+                  isPending || isActive
+                    ? "dark:text-primary-400 text-primary-500"
+                    : null
+                }
+              >
+                {tab.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
         <div className="flex gap-x-4">
           <button
