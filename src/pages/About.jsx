@@ -44,10 +44,16 @@ function About() {
   return (
     <div className="grid grid-cols-1 pb-24 gap-x-8 lg:gap-y-4 md:gap-y-8 lg:grid-cols-2 px-4 md:px-16 lg:grid-rows-[auto_1fr]">
       <section className="col-start-1 row-start-2 lg:row-start-1 lg:row-end-3">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-800 my-5 dark:text-zinc-100 sm:text-5xl">
-          <span ref={typedRef}></span>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-800 mt-5 mb-3 dark:text-zinc-100 sm:text-5xl">
+          Paul Pommer
         </h1>
+        <div className="text-xl md:text-2xl font-semibold text-zinc-600 dark:text-zinc-400">
+          <span ref={typedRef}></span>
+        </div>
         <div className="text-zinc-600 dark:text-zinc-400 space-y-7 mt-10 text-base">
+          <p>
+            Hi, I'm Paul. Thanks for visiting my website!
+          </p>
           <p>
             I'm a senior research engineer at the <a href="https://dynamical-inference.ai/" target="_blank" rel="noopener noreferrer" className="text-primary-400">Dynamical Inference Lab</a> building robust and interpretable machine learning tools for decompiling biological computations.
             Currently, I'm building core infrastructure for explainability research including a framework for empirical identifiability and consistency, software libraries & data engines around sparse autoencoder (SAE) training, and software for annotating and hosting concepts extracted by SAEs.
