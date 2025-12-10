@@ -9,31 +9,31 @@ function Footer() {
       <div className=" w-full px-12  flex flex-col items-center gap-y-5 text-sm md:flex-row md:justify-between md:gap-x-10 ">
         <div className="flex font-semibold text-sm gap-x-6 mb-2 md:mb-0 text-zinc-800 dark:text-zinc-200">
           <NavLink
-            className="transition hover:teaxt-teal-500 dark:hover:text-teal-400"
+            className="transition hover:text-primary-500 dark:hover:text-primary-400"
             to="about"
           >
             About
           </NavLink>
           <NavLink
-            className="transition hover:teaxt-teal-500 dark:hover:text-teal-400"
+            className="transition hover:text-primary-500 dark:hover:text-primary-400"
             to="articles"
           >
             Articles
           </NavLink>
           <NavLink
-            className="transition hover:teaxt-teal-500 dark:hover:text-teal-400"
+            className="transition hover:text-primary-500 dark:hover:text-primary-400"
             to="about"
           >
             About
           </NavLink>
           <NavLink
-            className="transition hover:teaxt-teal-500 dark:hover:text-teal-400"
+            className="transition hover:text-primary-500 dark:hover:text-primary-400"
             to="speaking"
           >
             Speaking
           </NavLink>
           <NavLink
-            className="transition hover:teaxt-teal-500 dark:hover:text-teal-400"
+            className="transition hover:text-primary-500 dark:hover:text-primary-400"
             to="uses"
           >
             Uses

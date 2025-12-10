@@ -57,20 +57,20 @@ function About() {
       <section className="pl-4 lg:pl-20">
         <div className="lg:col-start-2 max-w-xs lg:max-w-none pr-10 self-center  aspect-square  relative">
           <div className="relative min-w-[86px]	">
-            <div
+            {/* <div
               ref={(el) => (scotch.current[0] = el)}
               className="absolute top-[20%] -left-[5%] w-[6%] h-[9%]  z-10 -rotate-45 scotch-effect transition origin-left duration-1000 ease-in-out opacity-0 delay-[750ms]"
-            ></div>
+            ></div> */}
             <img
               ref={image}
               src={ProfileImage}
               alt="Profile"
               className="rounded-3xl overflow-hidden transition-transform duration-1000 ease-out-in scale-50"
             />
-            <div
+            {/* <div
               ref={(el) => (scotch.current[1] = el)}
               className="absolute bottom-[20%] -right-[5%] w-[6%] h-[9%]  z-10 -rotate-45 scotch-effect transition origin-right duration-1000 ease-in-out opacity-0 delay-[750ms]"
-            ></div>
+            ></div> */}
           </div>
         </div>
       </section>

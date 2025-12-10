@@ -36,7 +36,7 @@ function SubHeader() {
   }
   return (
     <span
-      className={`absolute transition	duration-300 ease-out w-12 left-5 ${customClass} inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0`}
+      className={`absolute transition	duration-300 ease-out w-12 left-5 ${customClass} inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary-500/0 via-primary-500/40 to-primary-500/0 dark:from-primary-400/0 dark:via-primary-400/40 dark:to-primary-400/0`}
     ></span>
   );
 }
@@ -193,12 +193,12 @@ function Header({ darkMode, toggleDarkMode }) {
         <ul className=" rounded-full hidden md:flex bg-white/90 px-3 py-2.5 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
           <SubHeader />
 
-          <li className="mx-3 hover:text-teal-400 transition ease-out">
+          <li className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="about"
               className={({ isActive, isPending }) =>
                 isPending || isActive
-                  ? "dark:text-teal-400 text-teal-500"
+                  ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
@@ -206,48 +206,48 @@ function Header({ darkMode, toggleDarkMode }) {
             </NavLink>
           </li>
 
-          <li className="mx-3 hover:text-teal-400 transition ease-out">
+          <li className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="articles"
               className={({ isActive, isPending }) =>
                 isPending || isActive
-                  ? "dark:text-teal-400 text-teal-500"
+                  ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
               Articles
             </NavLink>
           </li>
-          <li className="mx-3 hover:text-teal-400 transition ease-out">
+          <li className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="projects"
               className={({ isActive, isPending }) =>
                 isPending || isActive
-                  ? "dark:text-teal-400 text-teal-500"
+                  ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
               Projects
             </NavLink>
           </li>
-          <li className="mx-3 hover:text-teal-400 transition ease-out">
+          <li className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="speaking"
               className={({ isActive, isPending }) =>
                 isPending || isActive
-                  ? "dark:text-teal-400 text-teal-500"
+                  ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
               Speaking
             </NavLink>
           </li>
-          <li className="mx-3 hover:text-teal-400 transition ease-out">
+          <li className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="uses"
               className={({ isActive, isPending }) =>
                 isPending || isActive
-                  ? "dark:text-teal-400 text-teal-500"
+                  ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
@@ -271,7 +271,7 @@ function Header({ darkMode, toggleDarkMode }) {
             {darkMode ? (
               <MoonSVG className="w-6 h-6" />
             ) : (
-              <SunSVG className="w-6 h-6 fill-zinc-100 group-hover:fill-zinc-200  stroke-teal-500" />
+              <SunSVG className="w-6 h-6 fill-zinc-100 group-hover:fill-zinc-200  stroke-primary-500" />
             )}
           </div>
         </div>

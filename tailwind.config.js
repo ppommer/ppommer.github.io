@@ -8,6 +8,10 @@ module.exports = {
         backgroundSecondLayer: "rgba(39,39,42,.9)",
         backgroundLightFirstLayer: "rgb(250, 250, 250)",
         backgroundLightSecondLayer: "",
+        primary: {
+          400: "#5BDEFA",
+          500: "#49B2C8",
+        },
       },
     },
   },
