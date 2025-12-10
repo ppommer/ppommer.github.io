@@ -159,7 +159,7 @@ function About() {
             >
               <EmailIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-5 h-5 mr-2" />
               <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
-                Email
+                Send an email
               </p>
             </a>
           </li>
