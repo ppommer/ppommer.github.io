@@ -1,5 +1,6 @@
 import { ReactComponent as TwitterIcon } from "../assets/socials-icons/icons8-twitter.svg";
 import { ReactComponent as SoundCloudIcon } from "../assets/socials-icons/icons8-soundcloud.svg";
+import {ReactComponent as GoogleScholarIcon} from "../assets/socials-icons/icons8-google-scholar.svg";
 import { ReactComponent as GitHubIcon } from "../assets/socials-icons/icons8-github.svg";
 import { ReactComponent as LinkedInIcon } from "../assets/socials-icons/icons8-linkedin.svg";
 import { ReactComponent as InstagramIcon } from "../assets/socials-icons/icons8-instagram.svg";
@@ -87,7 +88,7 @@ function About() {
           <li className="mb-5">
             <a
               className="flex items-center group transition hover:text-teal-500"
-              href="https://www.linkedin.com/in/paul-pommer/"
+              href="https://linkedin.com/in/paul-pommer/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -100,7 +101,7 @@ function About() {
           <li className="mb-5">
             <a
               className="flex items-center group transition hover:text-teal-500"
-              href="https://www.github.com/ppommer"
+              href="https://github.com/ppommer"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -112,7 +113,7 @@ function About() {
           </li>
           <li className="mb-5">
             <a
-              href="https://www.soundcloud.com/pommerotti"
+              href="https://soundcloud.com/pommerotti"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center group transition hover:text-teal-500"
@@ -125,7 +126,7 @@ function About() {
           </li>
           {/* <li className="mb-5">
             <a
-              href="https://www.instagram.com"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center group transition hover:text-teal-500"
@@ -138,7 +139,7 @@ function About() {
           </li>
           <li className="mb-5 ">
             <a
-              href="https://www.twitter.com"
+              href="https://twitter.com"
               className="flex items-center group transition hover:text-teal-500 overflow-hidden"
               target="_blank"
               rel="noopener noreferrer"
