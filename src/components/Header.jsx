@@ -11,32 +11,67 @@ import ProfileImage from "../assets/images/profile-image.jpg";
 
 import React from "react";
 
-function SubHeader() {
+function SubHeader({ tabRefs }) {
   const location = useLocation();
+  const [underlineStyle, setUnderlineStyle] = useState({ opacity: 0, transform: 'translateX(0px)' });
 
-  let customClass;
-  switch (location.pathname) {
-    case "/about":
-      customClass = "translate-x-0";
-      break;
-    case "/articles":
-      customClass = "translate-x-[65px]";
-      break;
-    case "/projects":
-      customClass = "translate-x-[140px]";
-      break;
-    case "/speaking":
-      customClass = "translate-x-[215px]";
-      break;
-    case "/uses":
-      customClass = "translate-x-[287px]";
-      break;
-    default:
-      customClass = "opacity-0";
-  }
+  useEffect(() => {
+    const calculatePosition = () => {
+      const pathToIndex = {
+        "/about": 0,
+        "/articles": 1,
+        "/projects": 2,
+        "/speaking": 3,
+        "/uses": 4,
+      };
+
+      const index = pathToIndex[location.pathname];
+      
+      if (index !== undefined && tabRefs[index]?.current) {
+        const tabElement = tabRefs[index].current;
+        const tabRect = tabElement.getBoundingClientRect();
+        const parentRect = tabElement.closest('ul').getBoundingClientRect();
+        
+        // Calculate the center position of the tab
+        const tabCenter = tabRect.left - parentRect.left + tabRect.width / 2;
+        
+        // The underline is 48px wide (w-12), so we need to center it
+        // left-5 is 20px (1.25rem), so we adjust from that position
+        const underlineLeft = 20; // left-5 = 20px
+        const translateX = tabCenter - underlineLeft - 24; // 24px is half of 48px (w-12)
+        
+        setUnderlineStyle({
+          opacity: 1,
+          transform: `translateX(${translateX}px)`,
+        });
+      } else {
+        setUnderlineStyle({ opacity: 0, transform: 'translateX(0px)' });
+      }
+    };
+
+    // Calculate on mount and route change
+    calculatePosition();
+
+    // Recalculate on window resize
+    window.addEventListener('resize', calculatePosition);
+    
+    // Recalculate when fonts are loaded (in case font loading affects layout)
+    if (document.fonts) {
+      document.fonts.ready.then(calculatePosition);
+    }
+
+    return () => {
+      window.removeEventListener('resize', calculatePosition);
+    };
+  }, [location.pathname, tabRefs]);
+
   return (
     <span
-      className={`absolute transition	duration-300 ease-out w-12 left-5 ${customClass} inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary-500/0 via-primary-500/40 to-primary-500/0 dark:from-primary-400/0 dark:via-primary-400/40 dark:to-primary-400/0`}
+      className="absolute transition duration-300 ease-out w-12 left-5 inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary-500/0 via-primary-500/40 to-primary-500/0 dark:from-primary-400/0 dark:via-primary-400/40 dark:to-primary-400/0"
+      style={{
+        opacity: underlineStyle.opacity,
+        transform: underlineStyle.transform,
+      }}
     ></span>
   );
 }
@@ -50,6 +85,13 @@ function Header({ darkMode, toggleDarkMode }) {
 
   const header = useRef();
   const prevScrollHeight = useRef(0);
+  const tabRefs = [
+    useRef(null), // about
+    useRef(null), // articles
+    useRef(null), // projects
+    useRef(null), // speaking
+    useRef(null), // uses
+  ];
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -191,9 +233,9 @@ function Header({ darkMode, toggleDarkMode }) {
         )}
 
         <ul className=" rounded-full hidden md:flex bg-white/90 px-3 py-2.5 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-          <SubHeader />
+          <SubHeader tabRefs={tabRefs} />
 
-          <li className="mx-3 hover:text-primary-400 transition ease-out">
+          <li ref={tabRefs[0]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="about"
               className={({ isActive, isPending }) =>
@@ -206,7 +248,7 @@ function Header({ darkMode, toggleDarkMode }) {
             </NavLink>
           </li>
 
-          <li className="mx-3 hover:text-primary-400 transition ease-out">
+          <li ref={tabRefs[1]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="articles"
               className={({ isActive, isPending }) =>
@@ -218,7 +260,7 @@ function Header({ darkMode, toggleDarkMode }) {
               Articles
             </NavLink>
           </li>
-          <li className="mx-3 hover:text-primary-400 transition ease-out">
+          <li ref={tabRefs[2]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="projects"
               className={({ isActive, isPending }) =>
@@ -230,7 +272,7 @@ function Header({ darkMode, toggleDarkMode }) {
               Projects
             </NavLink>
           </li>
-          <li className="mx-3 hover:text-primary-400 transition ease-out">
+          <li ref={tabRefs[3]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="speaking"
               className={({ isActive, isPending }) =>
@@ -242,7 +284,7 @@ function Header({ darkMode, toggleDarkMode }) {
               Speaking
             </NavLink>
           </li>
-          <li className="mx-3 hover:text-primary-400 transition ease-out">
+          <li ref={tabRefs[4]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
               to="uses"
               className={({ isActive, isPending }) =>
