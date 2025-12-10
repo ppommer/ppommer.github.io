@@ -19,10 +19,10 @@ function SubHeader({ tabRefs }) {
     const calculatePosition = () => {
       const pathToIndex = {
         "/about": 0,
-        "/articles": 1,
-        "/projects": 2,
-        "/speaking": 3,
-        "/uses": 4,
+        "/blog": 1,
+        "/research": 2,
+        "/music": 3,
+        "/cv": 4,
       };
 
       const index = pathToIndex[location.pathname];
@@ -87,10 +87,10 @@ function Header({ darkMode, toggleDarkMode }) {
   const prevScrollHeight = useRef(0);
   const tabRefs = [
     useRef(null), // about
-    useRef(null), // articles
-    useRef(null), // projects
-    useRef(null), // speaking
-    useRef(null), // uses
+    useRef(null), // blog
+    useRef(null), // research
+    useRef(null), // music
+    useRef(null), // cv
   ];
 
   useEffect(() => {
@@ -189,23 +189,23 @@ function Header({ darkMode, toggleDarkMode }) {
             </NavLink>
           </li>
           <li className="py-3" onClick={closeMenu}>
-            <NavLink to="articles" onClick={closeMenu}>
-              Articles
+            <NavLink to="blog" onClick={closeMenu}>
+              Blog
             </NavLink>
           </li>
           <li className="py-3">
-            <NavLink to="projects" onClick={closeMenu}>
-              Projects
+            <NavLink to="research" onClick={closeMenu}>
+              Research
             </NavLink>
           </li>
           <li className="py-3">
-            <NavLink to="speaking" onClick={closeMenu}>
-              Speaking
+            <NavLink to="music" onClick={closeMenu}>
+              Music
             </NavLink>
           </li>
           <li className="py-3">
-            <NavLink to="uses" onClick={closeMenu}>
-              Uses
+            <NavLink to="cv" onClick={closeMenu}>
+              CV
             </NavLink>
           </li>
         </ul>
@@ -250,50 +250,50 @@ function Header({ darkMode, toggleDarkMode }) {
 
           <li ref={tabRefs[1]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
-              to="articles"
+              to="blog"
               className={({ isActive, isPending }) =>
                 isPending || isActive
                   ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
-              Articles
+              Blog
             </NavLink>
           </li>
           <li ref={tabRefs[2]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
-              to="projects"
+              to="research"
               className={({ isActive, isPending }) =>
                 isPending || isActive
                   ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
-              Projects
+              Research
             </NavLink>
           </li>
           <li ref={tabRefs[3]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
-              to="speaking"
+              to="music"
               className={({ isActive, isPending }) =>
                 isPending || isActive
                   ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
-              Speaking
+              Music
             </NavLink>
           </li>
           <li ref={tabRefs[4]} className="mx-3 hover:text-primary-400 transition ease-out">
             <NavLink
-              to="uses"
+              to="cv"
               className={({ isActive, isPending }) =>
                 isPending || isActive
                   ? "dark:text-primary-400 text-primary-500"
                   : null
               }
             >
-              Uses
+              CV
             </NavLink>
           </li>
         </ul>

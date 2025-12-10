@@ -62,19 +62,19 @@ function App() {
           element: <About />,
         },
         {
-          path: "/articles",
+          path: "/blog",
           element: <Articles />,
         },
         {
-          path: "/projects",
+          path: "/research",
           element: <Projects />,
         },
         {
-          path: "/speaking",
+          path: "/music",
           element: <Speaking />,
         },
         {
-          path: "/uses",
+          path: "/cv",
           element: <Uses />,
         },
         {

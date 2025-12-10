@@ -16,27 +16,27 @@ function Footer() {
           </NavLink>
           <NavLink
             className="transition hover:text-primary-500 dark:hover:text-primary-400"
-            to="articles"
+            to="blog"
           >
-            Articles
+            Blog
           </NavLink>
           <NavLink
             className="transition hover:text-primary-500 dark:hover:text-primary-400"
-            to="about"
+            to="research"
           >
-            About
+            Research
           </NavLink>
           <NavLink
             className="transition hover:text-primary-500 dark:hover:text-primary-400"
-            to="speaking"
+            to="music"
           >
-            Speaking
+            Music
           </NavLink>
           <NavLink
             className="transition hover:text-primary-500 dark:hover:text-primary-400"
-            to="uses"
+            to="cv"
           >
-            Uses
+            CV
           </NavLink>
         </div>
         <p className="text-sm text-zinc-400 dark:text-zinc-500">
