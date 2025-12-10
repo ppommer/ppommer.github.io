@@ -85,6 +85,19 @@ function About() {
       </section>
       <section className="col-start-1 lg:col-start-2 lg:pl-20 mt-8 lg:mt-0">
         <ul className="flex flex-col text-zinc-200 text-sm w-full">
+          {/* <li className="mb-5">
+            <a
+              className="flex items-center group transition hover:text-teal-500"
+              href="https://scholar.google.de/citations?user="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GoogleScholarIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2" />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+                Google Scholar
+              </p>
+            </a>
+          </li> */}
           <li className="mb-5">
             <a
               className="flex items-center group transition hover:text-teal-500"
