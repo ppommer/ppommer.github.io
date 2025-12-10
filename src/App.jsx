@@ -61,10 +61,10 @@ function App() {
           path: "/about",
           element: <About />,
         },
-        {
-          path: "/blog",
-          element: <Articles />,
-        },
+        // {
+        //   path: "/blog",
+        //   element: <Articles />,
+        // },
         {
           path: "/research",
           element: <Projects />,

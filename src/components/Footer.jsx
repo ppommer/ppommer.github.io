@@ -14,12 +14,12 @@ function Footer() {
           >
             About
           </NavLink>
-          <NavLink
+          {/* <NavLink
             className="transition hover:text-primary-500 dark:hover:text-primary-400"
             to="blog"
           >
             Blog
-          </NavLink>
+          </NavLink> */}
           <NavLink
             className="transition hover:text-primary-500 dark:hover:text-primary-400"
             to="research"

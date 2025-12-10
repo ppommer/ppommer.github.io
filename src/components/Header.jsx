@@ -78,7 +78,7 @@ function Header({ darkMode, toggleDarkMode }) {
   // Define tabs configuration - comment out any tab to hide it
   const tabsConfig = [
     { path: "about", label: "About" },
-    { path: "blog", label: "Blog" },
+    // { path: "blog", label: "Blog" },
     { path: "research", label: "Research" },
     { path: "music", label: "Music" },
     { path: "cv", label: "CV" },
