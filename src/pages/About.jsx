@@ -5,10 +5,12 @@ import { ReactComponent as InstagramIcon } from "../assets/socials-icons/icons8-
 import { ReactComponent as EmailIcon } from "../assets/socials-icons/email-svgrepo-com.svg";
 import ProfileImage from "../assets/images/profile-image.jpg";
 import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 
 function About() {
   const image = useRef();
   const scotch = useRef([]);
+  const typedRef = useRef(null);
 
   useEffect(() => {
     image.current.classList.remove("scale-50");
@@ -19,11 +21,27 @@ function About() {
     });
   }, [image, scotch]);
 
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: ["Research Engineer", "Software Engineer", "DJ"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="grid grid-cols-1 pb-24 gap-x-8 lg:gap-y-4 md:gap-y-8 lg:grid-cols-2 px-4 md:px-16 lg:grid-rows-[auto_1fr]">
       <section className="col-start-1 row-start-2 lg:row-start-1 lg:row-end-3">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-800 my-5 dark:text-zinc-100 sm:text-5xl">
-          I’m Spencer Sharp. I live in New York City, where I design the future.
+          <span ref={typedRef}></span>
         </h1>
         <div className="text-zinc-600 dark:text-zinc-400 space-y-7 mt-10 text-base">
           <p>
