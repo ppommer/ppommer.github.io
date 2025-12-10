@@ -106,26 +106,26 @@ function About() {
           </li> */}
           <li className="mb-5">
             <a
-              className="flex items-center group transition hover:text-teal-500"
+              className="flex items-center group transition hover:text-primary-400"
               href="https://linkedin.com/in/paul-pommer/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkedInIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2" />
-              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+              <LinkedInIcon className="fill-zinc-500 transition group-hover:fill-primary-400 w-6 h-6 mr-2" />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-primary-400 dark:text-zinc-200 dark:group-hover:text-primary-400">
                 Follow on LinkedIn
               </p>
             </a>
           </li>
           <li className="mb-5">
             <a
-              className="flex items-center group transition hover:text-teal-500"
+              className="flex items-center group transition hover:text-primary-400"
               href="https://github.com/ppommer"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GitHubIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2" />
-              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+              <GitHubIcon className="fill-zinc-500 transition group-hover:fill-primary-400 w-6 h-6 mr-2" />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-primary-400 dark:text-zinc-200 dark:group-hover:text-primary-400">
                 Follow on Github
               </p>
             </a>
@@ -135,10 +135,10 @@ function About() {
               href="https://soundcloud.com/pommerotti"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center group transition hover:text-teal-500"
+              className="flex items-center group transition hover:text-primary-400"
             >
-              <SoundCloudIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-6 h-6 mr-2 " />
-              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+              <SoundCloudIcon className="fill-zinc-500 transition group-hover:fill-primary-400 w-6 h-6 mr-2 " />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-primary-400 dark:text-zinc-200 dark:group-hover:text-primary-400">
                 Follow on SoundCloud
               </p>
             </a>
@@ -172,13 +172,13 @@ function About() {
           </li> */}
           <li className="border-t pt-5 border-zinc-100 dark:border-zinc-700/40 pl-1">
             <a
-              className="flex items-center group transition hover:text-teal-500"
+              className="flex items-center group transition hover:text-primary-400"
               href="mailto:website@ppom.simplelogin.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <EmailIcon className="fill-zinc-500 transition group-hover:fill-teal-500 w-5 h-5 mr-2" />
-              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-teal-500 dark:text-zinc-200 dark:group-hover:text-teal-500">
+              <EmailIcon className="fill-zinc-500 transition group-hover:fill-primary-400 w-5 h-5 mr-2" />
+              <p className="transition font-semibold ml-2 text-zinc-800 group-hover:text-primary-400 dark:text-zinc-200 dark:group-hover:text-primary-400">
                 Send an email
               </p>
             </a>
