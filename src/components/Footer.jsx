@@ -40,7 +40,7 @@ function Footer() {
           </NavLink>
         </div>
         <p className="text-sm text-zinc-400 dark:text-zinc-500">
-          © {currentYear} Spencer Sharp. All rights reserved.
+          © {currentYear} Paul Pommer. All rights reserved.
         </p>
       </div>
     </div>
