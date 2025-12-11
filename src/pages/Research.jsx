@@ -2,7 +2,7 @@ import ParticlesBackground from "../components/ParticlesBackground";
 
 function Research() {
   return (
-    <div className="relative px-4 md:px-14 lg:px-28 overflow-hidden min-h-screen">
+    <div className="relative px-4 md:px-14 lg:px-28 overflow-hidden">
       {/* Particles Background */}
       <ParticlesBackground id="tsparticles-research" />
       
