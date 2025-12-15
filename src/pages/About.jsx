@@ -60,8 +60,10 @@ function About() {
             I'm also interested in training transformers on brain data at scale to study how multi-modal neural datasets can be compressed into foundation models.
           </p>
           <p>
-            I'm also a senior software engineer at <a href="https://ki-macht-schule.de/" target="_blank" rel="noopener noreferrer" className="text-primary-400">KI macht Schule</a>, a non-profit science communication organization bringing AI education to schools across German-speaking countries.
-            We provide teachers with modern teaching software and are the first company to offer fully German-hosted LLMs for education purposes.
+            I'm also a senior software engineer at <a href="https://ki-macht-schule.de/" target="_blank" rel="noopener noreferrer" className="text-primary-400">KI macht Schule</a>, a non-profit organization teaching machine learning basics to high-school students.
+            We provide teachers with modern teaching materials, AI tools, and infrastructure in our <a href="https://hub.schule/" target="_blank" rel="noopener noreferrer" className="text-primary-400">open teaching hub</a> and offer student courses and teacher trainings on AI in Germany, Switzerland and Austria.
+            We have a great network of volunteers in 9 cities who do science outreach directly in schools.
+            If you want to help educating the next generation of students and make them literate in AI, consider to join our team!
           </p>
           <p>
             Besides that, I'm a DJ performing under the alias <a href="https://soundcloud.com/pommerotti" target="_blank" rel="noopener noreferrer" className="text-primary-400">Pommerotti</a>.
