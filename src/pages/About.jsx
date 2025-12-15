@@ -55,7 +55,7 @@ function About() {
             Hi, I'm Paul. Thanks for visiting my website!
           </p>
           <p>
-            I'm a senior research engineer at the <a href="https://dynamical-inference.ai/" target="_blank" rel="noopener noreferrer" className="text-primary-400">Dynamical Inference Lab</a> building robust and interpretable machine learning tools for decompiling biological computations.
+            I'm a senior research engineer at the <a href="https://dynamical-inference.ai/" target="_blank" rel="noopener noreferrer" className="text-primary-400">Dynamical Inference Lab</a> working on machine learning algorithms for representation learning and their application to neuroscience supervised by <a href="https://stes.io/" target="_blank" rel="noopener noreferrer" className="text-primary-400">Steffen Schneider</a>.
             Currently, I'm building core infrastructure for explainability research including a framework for empirical identifiability and consistency, software libraries & data engines around sparse autoencoder (SAE) training, and software for annotating and hosting concepts extracted by SAEs.
             I'm also interested in training transformers on brain data at scale to study how multi-modal neural datasets can be compressed into foundation models.
           </p>
